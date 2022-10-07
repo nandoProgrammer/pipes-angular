@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+
+header {
+    background-color: #16a085;
+
+    .container {
+
+        input {
+            border: none;
+            padding: .2em .5em;
+            border-radius: 10px;
+
+            &:focus {
+               outline: 0;
+            }
+        }
+    }
+}

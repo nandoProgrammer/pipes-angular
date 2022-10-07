@@ -1,0 +1,12 @@
+<app-header [filterValue]="filter"></app-header>
+<main>
+  <div *ngIf="list$ | async as list; else loading" class="container">
+    <app-card *ngFor="let item of list" [number]="item.number"></app-card>
+    <span *ngIf="!list.length">Sem valores</span>
+  </div>
+  <ng-template #loading>
+    <div class="container">
+      <span>Carregando...</span>
+    </div>
+  </ng-template>
+</main>
